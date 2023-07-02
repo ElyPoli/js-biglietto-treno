@@ -6,21 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esercizio 22: calcolo del prezzo del biglietto del treno</title>
 
+    <!-- Icone FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
     <!-- Bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Icona -->
+    <link rel="icon" href="img/italo-logo-small.png">
 </head>
 
 <body>
-
-    <main class="bg-info-subtle d-flex align-items-center vh-100">
-        <div class="container bg-info text-center fs-4 p-3 border border-primary rounded-4">
-            <h1 class="text-white fw-bold">Calcolo costo del biglietto:</h1>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item bg-transparent text-white border-0">Vuoi percorrere <span id="km-to-go"></span> km</li>
-                <li class="list-group-item bg-transparent text-white border-0">Hai <span id="age"></span> anni</li>
-            </ul>
-            <p class="text-white fw-bold">Il costo del tuo biglietto ammonta a: <span id="ticket-cost"></span>€</p>
+    <main class="bg-primary d-flex align-items-center vh-100">
+        <div class="container">
+            <div class="border rounded-2">
+                <!-- Sezione logo -->
+                <div class="d-flex align-items-center justify-content-between text-white p-3">
+                    <a class="link-light" href="#"><i class="fa-solid fa-bars fs-4"></i></a>
+                    <img class="my-img" src="img/italo-logo.png" alt="Logo">
+                    <a class="link-light" href="#"><i class="fa-regular fa-circle-user fs-4"></i></a>
+                </div>
+                <!-- Sezione sottotitolo -->
+                <div class="bg-secondary text-primary text-uppercase m-0 p-2 text-center">
+                    <p class="fs-5 m-0 p-0">Ben fatto! Ecco il tuo biglietto.</p>
+                </div>
+                <!-- Sezione codice biglietto -->
+                <div
+                    class="d-flex align-items-center justify-content-center text-white text-uppercase p-3 border-bottom">
+                    <p class="fs-6 m-0 p-0 pe-2 pt-1">Codice biglietto:</p>
+                    <p class="fs-3 m-0 p-0 ps-2" id="ticket-number"></p>
+                </div>
+                <!-- Sezione riepilogo biglietto -->
+                <div class="row">
+                    <!-- Sottosezione riepilogo dati -->
+                    <div class="col-12 col-sm-8 pe-sm-0">
+                        <div class="d-flex flex-column justify-content-center my-border-end border-sm-0 text-center text-white pt-3 pb-1 pb-sm-3 fs-4 h-100">
+                            <p>Data biglietto = <span id="date"></span></p>
+                            <p>Km da percorrere = <span id="km-to-go"></span></p>
+                            <p>Età = <span id="age"></span> - <span id="ticket-tipe" class="text-uppercase fs-5"></span></p>
+                        </div>
+                    </div>
+                    <!-- Sottosezione qrcode -->
+                    <div class="col-12 col-sm-4 ps-sm-0">
+                        <div class="text-center h-100 pt-1 pb-3 pt-sm-3 d-flex align-items-center justify-content-center">
+                            <div class="bg-secondary border rounded-4">
+                                <img class="my-img" src="img/qr-code.png" alt="qrcode">
+                                <div class="d-flex align-items-center justify-content-center fs-4 pb-2">
+                                    <a class="link-primary pe-3" href="#"><i class="fa-solid fa-wallet"></i></a>
+                                    <a class="link-primary pe-3" href="#"><i class="fa-regular fa-image"></i></a>
+                                    <a class="link-primary" href="#"><i class="fa-solid fa-share-nodes"></i></a>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sezione costo biglietto -->
+                <div class="bg-secondary text-primary text-uppercase m-0 p-2 text-center">
+                    <p class="fs-5 m-0 p-0 fw-bold">Il costo del biglietto ammonta a: <span id="ticket-cost"></span>€</p>
+                </div>
+            </div>
         </div>
     </main>
 

@@ -1,0 +1,20 @@
+:root {
+    --bs-primary: #a6160b;
+    --bs-primary-rgb: 168, 21, 11;
+    --bs-secondary: #eeeeee;
+    --bs-secondary-rgb: 238, 238, 238;
+}
+
+.my-img {
+    max-width: 150px;
+}
+
+.link-primary:focus, .link-primary:hover {
+    color: RGBA(133, 18, 9,var(--bs-link-opacity,1))!important;
+}
+
+@media (min-width: 576px) {
+    .my-border-end {
+        border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
+    }
+}
